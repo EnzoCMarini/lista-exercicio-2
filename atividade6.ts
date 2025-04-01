@@ -6,9 +6,11 @@ console.clear ()
 
 let teclado = require(`prompt-sync`)();
 
-let n: number = parseInt(teclado(`Digite o número que deseja transformar em fatorial: `));
-let fatorial: number 
+let fatorial: number = 0;
+let numero: number = parseInt(teclado(`Digite o número que deseja transformar em fatorial: `));
 
-fatorial = n * (n - 1)
+do{
+    fatorial = numero * (numero - 1)
+}while(numero == 0);
 
 console.log(`O número em fatorial é ${fatorial}`);
